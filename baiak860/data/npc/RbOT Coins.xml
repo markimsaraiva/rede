@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="RbOT Coins" script="data/npc/scripts/rbotcoins.lua" walkinterval="1000" floorchange="0">
+    <health now="100" max="100"/>
+    <look type="289" body="67" feet="97" head="0"  legs="96"  addons="3"/>
+    <parameters>
+		<parameter key="message_greet" value="Ola |PLAYERNAME| Eu troco {rbot coins} por {items}, diga {trade}." />
+        <parameter key="module_keywords" value="1" />
+    </parameters>
+</npc>

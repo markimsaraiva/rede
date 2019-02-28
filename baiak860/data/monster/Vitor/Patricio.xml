@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Patricio" nameDescription="a patricio" race="blood" experience="26600" speed="700" manacost="0">
+<health now="28000" max="28000"/>
+<look type="132" head="115" body="56" legs="77" feet="115" addons="3" corpse="6080"/>
+<targetchange interval="5000" chance="8"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="1"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="0"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="0"/>
+</flags>
+	<attacks>
+		<attack name="melee" interval="1000" skill="225" attack="200"/>
+	</attacks>
+	<defenses armor="1" defense="3"/>
+<voices interval="5000" chance="10">
+<voice sentence="Onde esta meu cha?!"/>
+<voice sentence="Quero voltar para a area urbana.."/>
+<voice sentence="Preparastes para a guerra??"/>
+</voices>
+	<loot>
+		<item id="2666" countmax="3" chance="13333"/><!-- meat -->
+		<item id="3976" countmax="3" chance="33333"/><!-- worm -->
+		</loot>
+</monster>
+

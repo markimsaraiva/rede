@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Mariun Ranger" nameDescription="a mariun ranger" race="blood" experience="350000" speed="600" manacost="0">
+	<health now="1050000" max="1050000"/>
+	<look type="129" head="114" body="116" legs="94" feet="116" addons="3" corpse="6080"/>
+	<targetchange interval="10000" chance="8"/>
+	<strategy attack="100" defense="20"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="85"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="physical" interval="1500" chance="25" range="12" min="-5800" max="-6700">
+		<attribute key="shootEffect" value="bolt"/>
+		</attack>
+		 	<attack name="physical" interval="1100" chance="15" range="7" min="-5090" max="-5900">
+			<attribute key="shootEffect" value="snowball"/>
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+	</attacks>
+	<defenses armor="90" defense="111">
+		<defense name="healing" interval="1000" chance="9" min="900" max="1500">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="healing" interval="1000" chance="17" min="900" max="1800">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="5" speedchange="1901" duration="7000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="1"/>
+		<element energyPercent="1"/>
+		<element deathPercent="1"/>
+		<element holyPercent="-5"/>
+		<element firePercent="1"/>
+	</elements>
+		<immunities>
+		<immunity invisible="1"/>
+		<immunity paralyze="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="I AM THE RANGER CHOSEN BY THE MARIUNS" yell="1"/>
+	</voices>
+	<loot>
+<item id="6527" chance="200"/>
+		<item id="2160" countmax="20" chance="80000"/><!-- platinum coin -->
+        <item id="7367" countmax="10" chance="2000"/><!-- enchanted spear -->
+        <item id="2195" chance="4500"/><!-- BOH -->
+		<item id="3940" chance="100000"><!-- bp -->
+			<inside>
+				<item id="5803" chance="2000"/><!-- arbalest -->
+    	 	    <item id="8849" chance="300"/><!-- mariun crossbow -->
+			</inside>
+		</item>
+	</loot>
+	<script> 
+<event name="mariunsKill"/> 
+</script>
+</monster>

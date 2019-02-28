@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channels>
+	<!-- README:
+		0 - dynamic, reserved for guilds
+		1 - always acts as Party channel, only "name" tag available
+		3 - always acts as Rule Violations channel
+		9 - acts as Help channel- clientsided message
+		65535 - DO NOT CHANGE THE ID- only "name", "enabled", "active" and "logged" tags available
+	 -->
+	<channel id="1" name="Party"/>
+	<channel id="2" name="Administracao" access="3"/>
+	<channel id="3" name="Reportar Bugs" logged="yes"/>
+	
+	
+	<channel id="6" name="Trocas/Trade" level="8" muted="60" conditionId="3" conditionMessage="Aguarde 1 minuto para enviar mensagem novamente.">
+		<vocation id="1-8"/>
+	</channel>
+	
+	<channel id="9" name="Ajuda/Help" level="200" muted="30" conditionId="6" conditionMessage="Aguarde 30 segundos para enviar uma mensagem novamente." logged="yes"/>
+	<!-- <channel id="10" name="My Custom Channel"/> -->
+<channel id="15" name="Death Channel"/>
+	<channel id="65535" name="Tibiacast"/>
+</channels>

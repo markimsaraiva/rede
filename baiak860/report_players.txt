@@ -1,0 +1,5 @@
+ [->] BUGS PLAYER[<-] 
+
+Sorc: Templo
+Rainbow: Templo
+

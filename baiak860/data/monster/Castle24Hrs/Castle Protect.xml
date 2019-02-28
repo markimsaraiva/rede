@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Castle Protect" nameDescription="a protect king" race="blood" experience="15000" speed="0" manacost="0">
+	<health now="1500000" max="1500000"/>
+	<look type="332" corpse="3058"/>
+	<targetchange interval="60000" chance="0"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="50"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>	
+	<attacks>
+      <attack name="melee" interval="900" min="-1000" max="-1800"/>
+    </attacks>
+	<defenses armor="30" defense="30"/>
+	<elements>
+		<element icePercent="50"/>
+		<element firePercent="40"/>
+		<element holyPercent="10"/>
+		<element energyPercent="-15"/>
+		<element deathPercent="-25"/>
+	</elements>
+</monster>

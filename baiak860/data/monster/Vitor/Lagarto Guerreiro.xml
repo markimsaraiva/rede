@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Lagarto Guerreiro" nameDescription="a lagarto guerreiro" race="blood" experience="200000" speed="800" manacost="0">
+<health now="350000" max="350000"/>
+<look type="343" corpse="11281"/>
+<targetchange interval="5000" chance="8"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="1"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="0"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="150"/>
+</flags>
+<attacks>
+<attack name="melee" interval="2000" skill="100" attack="400"/>
+<attack name="poison" interval="2000" chance="70" range="3" radius="1" target="1" min="-2800" max="-4000">
+<attribute key="areaEffect" value="poison"/>
+</attack>
+</attacks>
+	<defenses armor="35" defense="35">
+	</defenses>
+<elements>
+<element physicalPercent="5"/>
+<element holyPercent="1"/>
+<element deathPercent="10"/>
+<element firePercent="45"/>
+<element energyPercent="20"/>
+<element icePercent="15"/>
+<element earthPercent="35"/>
+</elements>
+<immunities>
+<immunity earth="1"/>
+<immunity invisible="1"/>
+</immunities>
+<loot>
+<item id="2148" countmax="50" chance="12500"/><!-- gold coin -->
+<item id="2148" countmax="50" chance="12500"/><!-- gold coin -->
+<item id="11325" chance="4000"/><!-- zaogun shoulderplates -->
+<item id="7591" chance="10000"/><!-- great health pothion -->
+<item id="11200" chance="4500"/><!-- red lantern -->
+<item id="1987" chance="100000"><!-- bag -->
+<inside>
+<item id="7588" chance="7000"/><!-- strong health potion -->
+<item id="5881" chance="1500"/><!-- lizard scale -->
+<item id="2149" chance="2500"/><!-- small emerald -->
+<item id="11324" chance="1000"/><!-- zaogun flag -->
+<item id="11298" chance="500"/><!-- zaoan legs -->
+</inside>
+</item>
+</loot>
+</monster>

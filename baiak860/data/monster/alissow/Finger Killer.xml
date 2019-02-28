@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Finger Killer" nameDescription="a Finger Killer" race="venom" experience="1000000" speed="720" manacost="0">
+<health now="500600" max="500600"/>
+<look type="130" head="19" body="55" legs="55" feet="0" addons="2" corpse="6080"/>
+<targetchange interval="5000" chance="12"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="1"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="0"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="0"/>
+</flags>
+<attacks>
+		<attack name="melee" interval="2000" skill="70" attack="100"/>
+		<attack name="manadrain" interval="1000" chance="7" range="7" min="-100" max="-600">
+			<attribute key="shootEffect" value="energy"/>
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+		<attack name="drunk" interval="1000" chance="7" range="7">
+			<attribute key="shootEffect" value="energy"/>
+			<attribute key="areaEffect" value="energyarea"/>
+		</attack>
+		<attack name="strength" interval="1000" chance="9" range="7">
+			<attribute key="shootEffect" value="largerock"/>
+			<attribute key="areaEffect" value="energyarea"/>
+		</attack>
+		<attack name="lifedrain" interval="1000" chance="13" radius="8" target="0" min="-200" max="-400">
+			<attribute key="areaEffect" value="bluebubble"/>
+		</attack>
+		<attack name="manadrain" interval="1000" chance="10" radius="8" target="0" min="-200" max="-400">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</attack>
+		<attack name="speed" interval="1000" chance="12" radius="6" target="0" speedchange="-1900" duration="60000">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="strength" interval="1000" chance="8" radius="5" target="0">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+		<attack name="outfit" interval="1000" chance="15" radius="8" target="0" monster="merlin" duration="5000">
+			<attribute key="areaEffect" value="bluebubble"/>
+		</attack>
+
+		<attack name="fire" interval="1000" chance="34" range="7" radius="7" target="1" min="-100" max="-900">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+		<attack name="lifedrain" interval="1000" chance="15" length="8" spread="0" min="-500" max="-850">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+	</attacks>
+<defenses armor="16" defense="19"/>
+<elements>
+<element physicalPercent="1"/>
+<element holyPercent="1"/>
+<element deathPercent="10"/>
+<element firePercent="-1"/>
+<element energyPercent="-1"/>
+<element icePercent="15"/>
+<element earthPercent="1"/>
+</elements>
+<immunities>
+<immunity invisible="1"/>
+</immunities>
+<voices interval="5000" chance="10">
+<voice sentence="Zrp zrp!"/>
+</voices>
+<loot>
+<item id="6527" countmax="15" chance="70000"/><!-- event coins -->
+<item id="9971" countmax="2" chance="50000"/><!-- dinheiro -->
+<item id="2160" countmax="100" chance="50000"/><!-- dinheiro -->
+</loot>
+</monster>

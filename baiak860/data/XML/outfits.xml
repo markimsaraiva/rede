@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<outfits>
+    <outfit id="1">
+        <list gender="0" lookType="136" name="Citizen">
+        <attribute speed="20"/>
+        <stats maxHealth="300"/>
+            </list>
+        <list gender="1" lookType="128" name="Citizen">
+        <attribute speed="20"/>
+        <stats maxHealth="300"/>
+            </list>
+    </outfit>
+
+    <outfit id="2">
+        <list gender="0" lookType="137" name="Hunter">
+        <skills dist="6"/>
+        </list>
+        <list gender="1" lookType="129" name="Hunter">
+        <skills dist="6"/>
+        </list>
+    </outfit>
+
+    <outfit id="3">
+        <list gender="0" lookType="138" name="Mage">
+        <stats magLevel="2"/>
+        <stats maxMana="600"/>
+        </list>
+        <list gender="1" lookType="130" name="Mage">
+        <stats magLevel="2"/>
+        <stats maxMana="600"/>
+        </list>
+    </outfit>
+
+    <outfit id="4">
+        <list gender="0" lookType="139" name="Knight">
+        <skills sword="6"/>
+        <stats maxHealth="300"/>
+        </list>
+        <list gender="1" lookType="131" name="Knight">
+        <skills sword="6"/>
+        <stats maxHealth="300"/>
+        </list>
+    </outfit>
+
+    <outfit id="5">
+        <list gender="0" lookType="140" name="Noblewoman">
+        <skills club="7"/>
+        <stats maxHealth="300"/>
+        </list>
+        <list gender="1" lookType="132" name="Nobleman">
+        <skills club="7"/>
+        <stats maxHealth="300"/>
+        </list>
+    </outfit>
+
+    <outfit id="6">
+        <list gender="0" lookType="141" name="Summoner">
+        <stats magLevel="2"/>
+        <stats maxMana="500"/>
+        </list>
+        <list gender="1" lookType="133" name="Summoner">
+        <stats magLevel="2"/>
+        <stats maxMana="500"/>
+        </list>
+    </outfit>
+
+    <outfit id="7">
+        <list gender="0" lookType="142" name="Warrior">
+        <skills sword="6"/>
+        <stats maxHealth="300"/>
+        </list>
+        <list gender="1" lookType="134" name="Warrior">
+        <skills sword="6"/>
+        <stats maxHealth="300"/>
+        </list>
+    </outfit>
+ 
+    <outfit id="8">
+        <list gender="0" lookType="147" name="Barbarian">
+        <skills axe="6"/>
+        <stats maxHealth="300"/>
+        </list>
+        <list gender="1" lookType="143" name="Barbarian">
+        <skills axe="6"/>
+        <stats maxHealth="300"/>
+        </list>
+    </outfit>
+ 
+    <outfit id="9">
+        <list gender="0" lookType="148" name="Druid">
+        <stats magLevel="2"/>
+        <stats maxHealth="300"/>
+        </list>
+        <list gender="1" lookType="144" name="Druid">
+        <stats magLevel="2"/>
+        <stats maxHealth="300"/>
+        </list>
+    </outfit>
+
+    <outfit id="10">
+        <list gender="0" lookType="149" name="Wizard">
+        <attribute speed="15"/>
+        <stats magLevel="1"/>
+        <stats maxMana="300"/>
+        <stats maxHealth="300"/>
+        </list>
+        <list gender="1" lookType="145" name="Wizard">
+        <attribute speed="15"/>
+        <stats magLevel="1"/>
+        <stats maxMana="300"/>
+        <stats maxHealth="300"/>
+        </list>
+    </outfit>
+ 
+    <outfit id="11">
+        <list gender="0" lookType="150" name="Oriental">
+        <attribute speed="20"/>
+        <stats maxHealth="350"/>
+        <stats maxMana="350"/>
+            </list>
+        <list gender="1" lookType="146" name="Oriental">
+        <attribute speed="20"/>
+        <stats maxHealth="350"/>
+        <stats maxMana="350"/>
+            </list>
+    </outfit>
+ 
+    <outfit id="12">
+        <list gender="0" lookType="155" name="Pirate">
+        <stats maxHealth="400"/>
+        <skills club="6"/>
+        </list>
+        <list gender="1" lookType="151" name="Pirate">
+        <stats maxHealth="400"/>
+        <skills club="6"/>
+        </list>
+    </outfit>
+ 
+    <outfit id="13">
+        <list gender="0" lookType="156" name="Assassin">
+        <attribute speed="25"/>
+        <skills dist="6"/>
+            </list>
+        <list gender="1" lookType="152" name="Assassin">
+        <attribute speed="25"/>
+        <skills dist="6"/>
+            </list>
+    </outfit>
+
+    <outfit id="14">
+        <list gender="0" lookType="157" name="Beggar">
+        <stats maxHealth="500"/>
+        </list>
+        <list gender="1" lookType="153" name="Beggar">
+        <stats maxHealth="500"/>
+        </list>
+    </outfit>
+ 
+    <outfit id="15">
+        <list gender="0" lookType="158" name="Shaman">
+        <stats magLevel="2"/>
+        <stats maxmana="400"/>
+        </list>
+        <list gender="1" lookType="154" name="Shaman">
+        <stats magLevel="2"/>
+        <stats maxmana="400"/>
+        </list>
+    </outfit>
+ 
+    <outfit id="16">
+        <list gender="0" lookType="252" name="Norsewoman">
+        <skills shielding="8"/>
+        <stats maxHealth="400"/>
+        </list>
+        <list gender="1" lookType="251" name="Norseman">
+        <skills shielding="8"/>
+        <stats maxHealth="400"/>
+        </list>
+    </outfit>
+ 
+    <outfit id="17">
+        <list gender="0" lookType="269" name="Nightmare">
+        <skills shielding="10"/>
+        <stats maxHealth="300"/>
+        <skills axe="5"/>
+        </list>
+        <list gender="1" lookType="268" name="Nightmare">
+        <skills shielding="10"/>
+        <stats maxHealth="300"/>
+        <skills axe="5"/>
+        </list>
+    </outfit>
+ 
+    <outfit id="18">
+        <list gender="0" lookType="270" name="Jester">
+        <attribute speed="25"/>
+        <stats maxHealth="300"/>
+        </list>
+        <list gender="1" lookType="273" name="Jester">
+        <attribute speed="25"/>
+        <stats maxHealth="300"/>
+        </list>
+    </outfit>
+
+    <outfit id="19">
+        <list gender="0" lookType="279" name="Brotherhood">
+        <stats magLevel="2"/>
+        <stats maxHealth="300"/>
+        <attribute speed="20"/>
+        </list>
+        <list gender="1" lookType="278" name="Brotherhood">
+        <stats magLevel="2"/>
+        <stats maxHealth="300"/>
+        <attribute speed="20"/>
+        </list>
+    </outfit>
+ 
+    <outfit id="20">
+        <list gender="0" lookType="288" name="Demonhunter">
+        <attribute speed="15"/>
+        <stats maxHealth="400"/>
+        <stats maxMana="200"/>
+        </list>
+        <list gender="1" lookType="289" name="Demonhunter">
+        <attribute speed="15"/>
+        <stats maxHealth="400"/>
+        <stats maxMana="200"/>
+        </list>
+    </outfit>
+ 
+    <outfit id="21">
+        <list gender="0" lookType="324" name="Yalaharian">
+        <attribute speed="20"/>
+        <stats magLevel="2"/>
+        </list>
+        <list gender="1" lookType="325" name="Yalaharian">
+        <attribute speed="20"/>
+        <stats magLevel="2"/>
+        </list>
+    </outfit>
+ 
+    <outfit id="22">
+        <list gender="0" lookType="336" name="Warmaster">
+        <stats maxMana="400"/>
+        <attribute speed="10"/>
+        <stats maxHealth="300"/>
+        <stats magLevel="2"/>
+        </list>
+        <list gender="1" lookType="335" name="Warmaster">
+        <stats maxMana="400"/>
+        <attribute speed="10"/>
+        <stats maxHealth="300"/>
+        <stats magLevel="2"/>
+        </list>
+    </outfit>
+
+	<outfit id="23" default="0">
+	<list gender="0" lookType="254" name="Satan Power"/>
+        <list gender="1" lookType="255" name="Satan Power"/> 
+	</outfit>
+
+	<outfit id="24">
+		<list gender="0" lookType="366" name="Wayfarer">
+		<attribute speed="10"/>
+        	<stats maxHealth="400"/>
+        	<stats maxMana="300"/>
+        	</list>
+		<list gender="1" lookType="367" name="Wayfarer">
+		<attribute speed="10"/>
+        	<stats maxHealth="400"/>
+        	<stats maxMana="300"/>
+        	</list>
+	</outfit>
+           
+        <outfit id="25" premium="no" quest="19000">
+<list gender="0" lookType="264" name="VIP"/> -- female
+<list gender="1" lookType="253" name="VIP"/> --- male>
+        </outfit>
+
+</outfits>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="King pirate" nameDescription="a king pirate" race="blood" experience="60000" speed="2000" manacost="330">
+  <health now="90000" max="90000"/>
+  <look type="98" head="0" body="0" legs="0" feet="0" corpse="6080"/>
+  <targetchange interval="2000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+     <attacks>
+    <attack name="melee" interval="2000" skill="160" attack="185"/>
+    <attack name="physical" interval="2000" chance="25" range="8" min="-800" max="-1400">
+		<attribute key="shootEffect" value="throwingstar"/>
+			</attack>
+    <attack name="melee" interval="1000" chance="30" range="7" radius="3" target="1" min="-400" max="-700">
+		<attribute key="areaEffect" value="rednote"/>
+</attack>
+</attacks>
+    <defenses>
+    <defenses armor="50" defense="50"/>
+	<defense name="healing" interval="2000" chance="100" min="2000" max="5000"/>
+	</defenses>
+  <elements>
+    <element icePercent="20"/>
+    <element holyPercent="20"/>
+    <element deathPercent="30"/>
+  </elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+  <voices interval="4000" chance="10">
+    <voice sentence="I am the king"/>
+    <voice sentence="MUAHAHAHA!"/>
+    <voice sentence="You'll die!!"/>
+    <voice sentence="kaplar!"/>
+  </voices>
+    <loot>
+        <item id="2160" countmax="20" chance="23000"/><!-- gold coin -->
+        <item id="6101" chance="5000"/><!-- ron the ripper's sabre -->
+        <item id="5926" chance="7000"><!-- bag -->
+            <inside>
+            </inside>
+        </item>
+    </loot>
+</monster>

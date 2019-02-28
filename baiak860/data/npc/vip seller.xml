@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Itens Iniciais" script="data/npc/scripts/default.lua" walkinterval="200" floorchange="0" emblem="3">
+	<health now="100" max="100"/>
+	<look type="143" body="105" feet="0" head="59"  legs="122"  addons="3"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="stamina potion,7488,1000000;Moon Backpack,10521,500;Minotaur Backpack,11238,500;Backpack Hooding,2365,5000;Machete,2420,500;Fluffy Santa Backpack,11257,10000;Expedition Backpack,11234,10000;Heart Backpack,11115,10000;Lizard Backpack,11236,10000;Expedition Bag,11235,10000;Minotaur Backpack,11237,10000;imperium Sword,12610,200000;Staff of Baiak,7426,200000;Vip Free Star,7366,200000;imperium club,7428,200000;imperium axe,8924,200000;"/>
+	</parameters>
+</npc>

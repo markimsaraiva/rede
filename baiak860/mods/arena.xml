@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<mod name="Arena" version="1.0" author="DrakyLucas" contact="XTibia" enabled="yes">
+<config name="arena_config"><![CDATA[
+  config = {
+   delay = 30, -- tempo de um level para o outro
+   posicaoPlayer = {x = 372,y = 30,z = 7}, -- posição q o player vai cair dps de entra no TP
+   posicaoArena = {{x = 352,y = 16,z = 7},{x = 393,y = 44,z = 7}},
+   premio = {
+   {2160,200},
+   {2160,200},
+   }, -- ID, Quantidade... só aceita de 1 a 100 por vez, e você pode adicionar quantos itens quiser.
+   storage = 15444, -- não mecha..
+   posicaoTp = {x = 155, y = 52, z = 7}, -- posicao que o teleporte vai aparecer
+   acesso = 3, -- acesso  minimo para ser ignorado pelo evento, e o mesmo acesso para poder inicializa-lo
+  }
+  -- você pode adicionar quantos leveis desejar
+  -- [NumeroDoLevel] = {{"Nome",Quantidade},{"Nome",Quantidade},{"Nome",Quantidade},{"Nome",Quantidade},{"Nome",Quantidade}},
+  leveis = {
+  [1] = {{"Morgaroth",2}},
+  [2] = {{"ghazbaran",3},{"ferumbras",5}},
+  [3] = {{"Infernatil",6}},
+  [4] = {{"infernatlil",7},{"ferumbras",2}},
+  [5] = {{"ghazbaran",7},{"morgaroth",8},{"Ferumbras",10}},
+  }
+  
+   function abrirTeleport(n)
+        doItemSetAttribute(doCreateItem(1387, config.posicaoTp), "aid", 2941) -- cria o tp e deixa aid 2941
+        doBroadcastMessage("O Evento arena vai começar! teleport foi aberto e faltam ".. n .. " pessoas para o evento iniciar!")
+        doSetStorage(config.storage, n)
+   end
+  
+   function fecharTPeAguardarEvento()
+        doRemoveItem(getTileItemById(config.posicaoTp, 1387).uid,100)
+        doBroadcastMessage("O evento ja concluiu " .. #getPlayersInArena() .. " players e começará em " .. config.delay .. " segundos!")
+        addEvent(evento,config.delay*1000,1)
+   end
+  
+  
+   function HaveCreatureArena(area, remove, clean) -- função do Vodkart
+                        for x = area[1].x - 1, area[2].x + 1 do
+                                for y = area[1].y - 1, area[2].y + 1 do
+                                        local pos = {x=x, y=y, z=area[1].z}
+                                        local m = getTopCreature(pos).uid
+                                        if remove ~= false and m ~= 0 and isMonster(m) then doRemoveCreature(m) end
+                                        if clean ~= false then doCleanTile(pos, false) end
+                                end
+   end
+   end
+   function resetEvento()
+        doSetStorage(config.storage, -1)
+   end
+  
+   function criarMonstros(lv)
+        local monstro = leveis[lv]
+        local area = {config.posicaoArena[1],config.posicaoArena[2]}
+        for i = 1,#monstro do
+         for k=1,monstro[i][2]do
+                pos = {x=math.random(area[1].x,area[2].x), y=math.random(area[1].y,area[2].y), z=area[1].z}
+          monstrinho = doCreateMonster(monstro[i][1], pos)
+          registerCreatureEvent(monstrinho, "removerCorpse")
+         end
+        end
+   end
+  
+   function evento(i)
+        if #getPlayersInArena() == 0 then
+         doBroadcastMessage("Ninguém sobreviveu a arena =/")
+         doBroadcastMessage("O evento acabou!")
+         HaveCreatureArena({config.posicaoArena[1],config.posicaoArena[2]}, true, true) -- remove monstros, itens da arena
+         resetEvento()
+         return true
+        end
+  
+        if i == (#leveis +1) then
+        HaveCreatureArena({config.posicaoArena[1],config.posicaoArena[2]}, true, true)
+          doBroadcastMessage("Evento finalizado, " .. #getPlayersInArena() .. " sobreviveram ao evento!")
+         for _, pid in ipairs(getPlayersInArena()) do
+          doPlayerSendTextMessage(pid,22,"Parabéns, você sobreviveu ao evento!")
+          addItens(pid)
+          doTeleportThing(pid,getTownTemplePosition(getPlayerTown(pid)))
+         end
+          resetEvento()
+          return true
+        end
+         for _, pid  in ipairs(getPlayersInArena()) do
+          doPlayerSendTextMessage(pid,22,"Nivel " .. i .. " !!!")
+         end
+        criarMonstros(i)
+        addEvent(evento,config.delay*1000,i+1)
+   end
+   function addItens(pid)
+        for i=1,#config.premio do
+         doPlayerAddItem(pid,config.premio[i][1],config.premio[i][2])
+        end
+        doPlayerSendTextMessage(pid,22,"Parabéns, você recebeu seus premios!")
+   end
+  
+   function getPlayersInArena()
+   local t = {}
+        for _, pid in pairs(getPlayersOnline()) do
+         if getPlayerAccess(pid) < config.acesso then
+         if isInRange(getCreaturePosition(pid), config.posicaoArena[1], config.posicaoArena[2]) then
+                                                table.insert(t, pid)
+         end
+         end
+        end
+   return t
+   end
+  
+]]></config>
+<talkaction words="/arena" event="buffer"><![CDATA[
+  domodlib('arena_config')
+  if getPlayerAccess(cid) < config.acesso then
+   return doPlayerSendCancel(cid,"Você nao tem acesso para esse comando")
+  end
+  if tonumber(param) ~= nil then -- se o parametro é numerico
+   if tonumber(param) > 0 then
+        doSetStorage(config.storage, param)
+        abrirTeleport(param)
+   end
+  else
+  doPlayerSendTextMessage(cid,19,"Digite /arena e um numero.. \n exemplo: \n/arena 5")
+  end
+
+]]></talkaction>
+
+<movevent type="StepIn" actionid="2941" event="script"><![CDATA[
+                domodlib('arena_config')
+                         if getPlayerAccess(cid) > config.acesso then doTeleportThing(cid, config.posicaoPlayer) return false end -- GM nao conta
+        doSetStorage(config.storage,getStorage(config.storage) - 1)
+        doTeleportThing(cid, config.posicaoPlayer)
+        registerCreatureEvent(cid, "naoAtacarPlayer")
+        registerCreatureEvent(cid, "morrerNaArena")
+        if getStorage(config.storage) <= 0 then
+        fecharTPeAguardarEvento()
+        end
+        return true       
+]]></movevent>
+<event type="login" name="VerSeTaNaArenaEExpulsa" event="script"><![CDATA[
+domodlib('arena_config')
+if isInRange(getCreaturePosition(cid), config.posicaoArena[1], config.posicaoArena[2]) then
+doTeleportThing(cid, getTownTemplePosition(getPlayerTown(cid)))
+end
+return true  
+]]></event>
+<event type="combat" name="naoAtacarPlayer" event="script"><![CDATA[
+                                 domodlib('arena_config')
+                                 if isPlayer(cid) and isPlayer(target) then
+                                           if isInRange(getPlayerPosition(cid), config.posicaoArena[1], config.posicaoArena[2]) and isInRange(getPlayerPosition(target), config.posicaoArena[1], config.posicaoArena[2]) then
+                                                                doPlayerSendCancel(cid, "Nao ataque seus amigos.")
+                                                                return false
+                                                end
+                                end
+                                return true
+]]></event>
+<event type="death" name="removerCorpse" event="script"><![CDATA[
+                                 domodlib('arena_config')
+         doCreatureSay(cid,"Ninguém terá meu loot! Buaahahahha",1)
+         pos = getCreaturePosition(cid)
+         addEvent(doCleanTile,1,pos, false)
+                                return true
+]]></event>
+<event type="statschange" name="morrerNaArena" event="script"><![CDATA[
+                                 domodlib('arena_config')
+         if isInRange(getPlayerPosition(cid), config.posicaoArena[1], config.posicaoArena[2]) then
+         if type == STATSCHANGE_HEALTHLOSS then
+          if isPlayer(cid) then
+                                                                if value >= getCreatureHealth(cid) then
+                 doTeleportThing(cid,getTownTemplePosition(getPlayerTown(cid)))
+                 doPlayerSendTextMessage(pid,22,"Você morreu na arena =/.. veja pelo lado positivo, você nao perdeu nada!")
+                 doCreatureAddHealth(cid,getCreatureMaxHealth(cid) - getCreatureHealth(cid))
+                return false
+                end
+                                                end
+          end
+                                end
+                                return true
+]]></event>
+</mod>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Lucifer" script="donation.lua" walkinterval="0" floorchange="0">
+<health now="100" max="100"/>
+<look type="325" body="94" feet="94" head="94"  legs="94"  addons="3"/>
+    <parameters>
+        <parameter key="module_travel" value="1"/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. Eu posso te levar para a Quest Promotion, Diga {Quest Promotion}. Isto ira te custar 7kk, Venha Queimar no INFERNO"/>
+        <parameter key="travel_destinations" value="quest promotion,1553,1825,4,7000000."/>
+</parameters>
+</npc>

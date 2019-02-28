@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Wind Minion" nameDescription="a wind minion" race="blood" experience="50725" speed="200" manacost="800">
+	<health now="30000" max="30000"/>
+	<look type="313" corpse="9938"/>
+	<targetchange interval="4000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2600" min="-640" max="-1000"/>
+		<attack name="lifedrain" interval="1000" chance="20" range="1" min="-720" max="-1050">
+			<attribute key="areaEffect" value="redspark"/>
+		</attack>
+	</attacks>
+	<defenses armor="20" defense="20">
+		<defense name="healing" interval="1000" chance="25" min="300" max="500">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element deathPercent="0"/>
+		<element holyPercent="0"/>
+		<element physicalPercent="0"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="3500" chance="60">
+		<voice sentence="Pazuzu vai saber disso!"/>
+		<voice sentence="Ihihihihihihiii"/>
+		<voice sentence="Como voce veio parar aqui?"/>
+	</voices>
+	<loot>
+		<item id="2520" chance="900"/>
+		<item id="2160" chance="1200"/>
+	</loot>
+</monster>

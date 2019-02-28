@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Pigglet" nameDescription="a pigglet" race="blood" experience="0" speed="2000" manacost="255">
+  <health now="150" max="150"/>
+  <look type="60" head="20" body="30" legs="40" feet="50" corpse="6000"/>
+  <targetchange interval="2000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="0"/>
+    <flag hostile="0"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="25"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="10" attack="100"/>
+    <attack name="speed" interval="1000" chance="30" range="7" speedchange="-700" duration="10000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+  </attacks>
+  <defenses armor="2" defense="2"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+<voices interval="11000" chance="100">
+		<voice sentence="Pigglet! Pigglet!"/>
+		<voice sentence="Ser malvado ajuda voce a ganhar mais"/>
+	<voice sentence="2.800 pizzas seriam necessarias para formar uma torre da altura da Torre de Pisa."/>
+	<voice sentence="Elvis Presley era coveiro, como todos em sua familia antes dele."/>
+	<voice sentence="Dez por cento das receitas da Russia vem da venda de Vodka."/>
+<voice sentence="A American Airlines economizou 40 mil dolares em 1987 eliminando uma azeitona de cada salada servida na primeira classe."/>
+<voice sentence="A Antartida eh o unico continente sem repteis"/>
+<voice sentence="Alunas de escolas so para meninas preferem rapazes com rosto feminino"/>
+<voice sentence="Piolho prejudica aprendizado"/>
+<voice sentence="A guerra mais curta da história foi entre Zanzibar e Inglaterra em 1896. O zanzibar rendeu-se ao fim de 38 minutos."/>
+<voice sentence="A lagosta carnivora, que habita nas aguas costeiras da Australia, conta-se entre os predadores mais rapidos da Terra."/>
+<voice sentence="A bucha contem somente de 2 a 6 por cento de THC, enquanto a seiva tem ate 60 por cento."/>
+<voice sentence="360.000 é o número de vagas disponiveis no exercito suiço, cujos profissionais sao apenas 3.300."/>
+<voice sentence="Apos um periodo de sede, os dromedarios sao capazes de beber, de uma so vez, de 60 a 100 litros de agua."/>
+	</voices>
+  <loot>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="2671" countmax="4" chance1="100000" chancemax="0"/>
+  </loot>
+</monster>

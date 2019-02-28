@@ -1,0 +1,13 @@
+     [->] NOVIDADES GRAN BAIAK [<-]    
+Atualizado:23/10/2017  As 15:57 Hrs (Brasilia)
+
+[+] Auto Loot Commands [+]
+!autoloot item name --> To add ou .Remove item from list.
+!autoloot money --> To collect gold automatically.
+!autoloot clear --> To clear the list.
+!autoloot on/off --> To enable or disable the collecting of items in the system.
+[+] Auto Loot Info [+]
+System: 
+Time: 
+[+] Auto Loot Slots [+]
+

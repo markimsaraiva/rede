@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Naz'Gul" nameDescription="a naz'gul" race="undead" experience="36000" speed="268" manacost="0">
+	<health now="20000" max="20000"/>
+  <look type="231" corpse="6306"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	 <attacks>
+      <attack name="melee" interval="2000" min="-700" max="-900"/>
+      <attack name="lifedrain" interval="3000" chance="40" min="-800" max="-1000"/>
+      <attack name="lifedrain" interval="3250" chance="40" radius="6" target="0" min="-700" max="-800">
+        <attribute key="areaEffect" value="poff"/>
+      </attack>
+      <attack name="lifedrain" interval="3000" chance="25" range="7" min="-700" max="-800">
+        <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    </attacks>
+	<defenses armor="30" defense="20">
+		<defense name="healing" interval="1000" chance="10" min="150" max="150">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element energyPercent="25"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>
+		<element holyPercent="20"/>
+		<element earthPercent="20"/>
+		<element physicalPercent="15"/>
+		<element deathPercent="-37"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Welcome to Yalahar, outsider." yell="1"/>
+		<voice sentence="Our wisdom and knowledge are unequalled in this world." yell="1"/>
+		<voice sentence="One day Yalahar will return to its former glory." yell="1"/>
+		<voice sentence="That knowledge would overburden your fragile mind." yell="1"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+	</loot>
+</monster>

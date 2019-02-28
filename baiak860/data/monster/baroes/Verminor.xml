@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Verminor" nameDescription="a Verminor" race="Venom" experience="250000" speed="1000" manacost="0">
+  <health now="10000000" max="10000000"/>
+  <look type="12" head="94" body="82" legs="94" feet="0" corpse="6068"/>
+  <targetchange interval="500" chance="8"/>
+  <strategy attack="500" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="2500"/>
+  </flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="180" attack="180"/>
+		<attack name="physical" interval="3000" chance="15" radius="5" target="0" min="-2000" max="-2500">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+		<attack name="poison" interval="2000" chance="16" range="7" radius="7" target="1" min="-1810" max="-2540">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="plantattack"/>
+		</attack>
+		<attack name="poisonfield" interval="1000" chance="10" range="7" radius="4" target="1">
+			<attribute key="shootEffect" value="poison"/>
+		</attack>
+		<attack name="lifedrain" interval="4000" chance="19" length="8" spread="0" min="-2832" max="-3600">
+			<attribute key="areaEffect" value="purpleenergy"/>
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="48">
+		<defense name="healing" interval="1000" chance="9" min="800" max="1000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="healing" interval="1000" chance="12" min="900" max="2000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="5" speedchange="400" duration="7000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="-15"/>
+		<element deathPercent="35"/>
+		<element holyPercent="-25"/>
+	</elements>
+	<immunities>
+		<immunity earth="1"/>
+		<immunity fire="1"/>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<summons maxSummons="30">
+		<summon name="Phantom Lord" interval="2000" chance="250"/>
+		<summon name="Finger Killer" interval="1000" chance="500"/>
+		<summon name="Brimstone Bug" interval="2500" chance="250"/>
+		<summon name="Green Phantom" interval="1500" chance="500"/>
+	</summons>
+	<voices interval="5000" chance="o">
+		<voice sentence="Your Noob!" yell="1"/>
+	</voices>
+	<loot>
+		<item id="2090" countmax="1" chance1="100" chancemax="0"/>
+		<item id="2472" chance="6000"/>
+		<item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+		<item id="5906" countmax="1" chance1="1000" chancemax="0"/>
+		<item id="5954" countmax="1" chance1="1000" chancemax="0"/>
+                <item id="3955" chance="100000">
+			<inside>
+				<item id="2421" chance="100000"/>
+				<item id="2157" countmax="35" chance1="10000" chancemax="0"/>
+				<item id="2157" countmax="10" chance1="100000" chancemax="0"/>
+				<item id="2144" countmax="4" chance1="100000" chancemax="0"/>
+				<item id="2462" chance="9700"/>
+				<item id="8302" countmax="3" chance1="1428" chancemax="0"/>
+				<item id="8300" chance="100000"/>
+				<item id="8306" chance="100000"/>
+				<item id="8300" chance="100000"/>
+				<item id="8306" chance="100000"/>
+				<item id="8300" chance="100000"/>
+				<item id="8306" chance="100000"/>
+				<item id="2470" chance="6500"/>
+				<item id="2520" chance="7050"/>
+				<item id="2418" chance="833"/>
+				<item id="5884" chance="4000"/>
+			</inside>
+		</item>
+	</loot>
+</monster>

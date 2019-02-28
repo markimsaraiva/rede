@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Alma Penada" nameDescription="an Alma Penada" race="undead" experience="78000" speed="160" manacost="100">
+	<health now="55000" max="55000"/>
+	<look type="48" corpse="5993"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="65" attack="48"/>
+		<attack name="lifedrain" interval="1000" chance="15" range="1" min="-600" max="-700"/>
+	</attacks>
+	<defenses armor="10" defense="10"/>
+	<elements>
+		<element physicalPercent="0"/>
+		<element earthPercent="0"/>
+		<element deathPercent="0"/>
+	</elements>
+	<immunities>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+	</immunities>
+	<voices interval="3000" chance="80">
+		<voice sentence="Oque? Porque me trouxe pra ca denovo?? Me leve devolta!"/>
+		<voice sentence="Acabe com meu sofrimento mais uma vez!"/>
+		<voice sentence="Eu gostava tanto da tranquilidade do outro mundo..."/>
+	</voices>
+	<loot>
+<item id="8871" chance="15000"/>
+<item id="2157" chance="250" countmax="3"/>
+<item id="2396" chance="14000"/>
+	</loot>
+</monster>

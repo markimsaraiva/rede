@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monsters>
+	
+	
+	<monster name="empe" file="empe.xml"/>
+	<monster name="pre1" file="pre1.xml"/>
+	<monster name="pre2" file="pre2.xml"/>
+	<monster name="guard" file="guard.xml"/>
+
+</monsters>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalevents>
+
+<globalevent name="propaganda" interval="19000" event="script" value="letreiro.lua"/>
+
+<globalevent name="TopFrags" interval="3600000" event="script" value="topfrags.lua"/>
+
+	<globalevent name="start" type="startup" event="script" value="start.lua"/>
+	<globalevent name="MensagensProgramadas" interval="29000" event="script" value="MensagensProgramadas.lua"/>
+	
+	<!--Real Team Battle-->
+	<globalevent name="Real Team Battle" time="18:03:00" event="script" value="events/realTeamBattle.lua"/>
+	
+<!--Real Castle-->
+	<globalevent name="RealCastle" time="02:05" event="script" value="events/realCastle.lua"/>
+	<globalevent name="RealCastleClose" time="03:35" event="script" value="events/realCastle.lua"/>
+
+	<!-- Events -->
+	
+
+	<globalevent name="dttOpen" time="01:03" event="script" value="events/DTT.lua"/> 
+
+<globalevent name="dttOpen2" time="05:18" event="script" value="events/DTT.lua"/> 
+	
+    <globalevent name="StartSBW" time="23:03" event="script" value="events/SBW.lua"/>
+    <globalevent name="StartSBW" time="23:03" event="script" value="events/SBW.lua"/>
+	<!-- <globalevent name="AnimatedSBW" interval="1500" event="script" value="events/SBW_animated.lua"/> -->
+	
+	<globalevent name="firestorm" time="16:47" event="script" value="events/FireStorm.lua"/>
+
+<globalevent name="firestormsabado" time="21:07" event="script" value="events/FireStorm.lua"/>
+
+<globalevent name="firestormmadrugada" time="07:24" event="script" value="events/FireStorm.lua"/>
+
+    <globalevent name="firestorm2" time="20:03" event="script" value="events/FireStorm.lua"/>
+	
+    <globalevent name="desertwar" time="21:33" event="script" value="events/DesertWAR.lua"/>
+	
+    <globalevent name="zombieevent" time="03:03" event="script" value="events/zombie.lua"/>
+
+<globalevent name="zombieevent2" time="07:36" event="script" value="events/zombie.lua"/>
+
+	<globalevent name="ctf" time="22:03" event="script" value="events/CTF.lua"/>
+	
+
+<globalevent name="battlefield3" time="05:33" event="script" value="events/Battlefield.lua"/>
+    <globalevent name="battlefield" time="10:45" event="script" value="events/Battlefield.lua"/>
+    <globalevent name="battlefield2" time="02:03" event="script" value="events/Battlefield.lua"/>
+<globalevent name="battlefieldNoite" time="01:40" event="script" value="events/Battlefield.lua"/>
+
+	<globalevent name="lottery" interval="60000" event="script" value="lotery.lua"/>
+
+
+    <globalevent name="shop" interval="30000" script="shop.lua"/>
+    <globalevent name="playersrecord" type="record" event="script" value="record.lua"/>
+   	<globalevent name="save" interval="2500000" event="script" value="save.lua"/>
+	<globalevent name="clean" interval="1000000" event="script" value="clean.lua"/>
+    <globalevent name="misterio" interval="2300000" script="misterio.lua"/>
+	<globalevent name="msgfly" interval="1553420" script="fly.lua"/>
+	<globalevent name="facebookk" interval="9665300" script="facebook.lua"/>
+    <globalevent name="mensagemrei" interval="2330000" script="mensagemrei.lua" />
+    <globalevent name="mensagemts" interval="1770000" script="mensagemts.lua" />
+	<globalevent name="info1" interval="2895600" script="ossos.lua"/>
+	<globalevent name="shopguild" interval="30000" event="script" value="shopguild.lua"/>
+	<globalevent name="init" type="startup" event="script" value="init.lua"/>
+	<globalevent name="startCave" type="startup" event="script" value="Killua Cave Owners.lua"/>
+	<globalevent name="Check Caves" interval="60000" event="script" value="Killua Cave Owners 2.lua"/>
+	<globalevent name="blog" interval="3500000" script="blog.lua" />
+	<!--<globalevent name="MensagemItems" interval="1800000" script="mensagemitems.lua" /> -->
+
+	<!-- Teleports -->
+	<globalevent name="tiles" interval="2000" script="tiles.lua"/>
+	<globalevent name="tile2" interval="2000" script="tiles2.lua"/>
+	<!-- <globalevent name="tiles4" interval="2000" script="snowballl.lua"/> -->
+	<globalevent name="offlinetiles" interval="2000" script="offlinetraining.lua"/>
+	<globalevent name="tiles3" interval="2000" script="tiles3.lua"/>
+
+	
+    
+
+	
+
+</globalevents>

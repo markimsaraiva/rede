@@ -1,0 +1,5 @@
+<?xml version = "1.0" ?>
+<npc name = "[Shop] Quero Full Vip" script = "Private Shop.lua" floorchange = "0" speed= "0" walkable = "true">
+       <health now = "150" max = "150"/>
+       <look type = "131" head = "114" body = "0" legs = "94" feet = "87" addons = "0" />
+</npc>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Mariun Wyzard" nameDescription="a mariun wyzard" race="blood" experience="330000" speed="600" manacost="0">
+	<health now="1000000" max="1000000"/>
+	<look type="144" head="114" body="116" legs="94" feet="116" addons="3" corpse="6080"/>
+	<targetchange interval="10000" chance="8"/>
+	<strategy attack="80" defense="20"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="85"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+        <attack name="melee" interval="3000" min="-2410" max="-4950"/>
+		<attack name="fire" interval="2000" chance="30" range="9" min="-4750" max="-6710">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="fire"/>
+		</attack>
+			<attack name="fire" interval="4000" chance="17" length="4" spread="3" min="-5000" max="-6700">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+				<attack name="manadrain" interval="3000" chance="10" radius="6" target="0" min="-4750" max="-6500">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="lifedrain" interval="3200" chance="21" radius="6" target="0" min="-3450" max="-5550">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+	</attacks>
+		<defenses armor="90" defense="111">
+		<defense name="healing" interval="1000" chance="9" min="1500" max="2500">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="healing" interval="1000" chance="17" min="600" max="1000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="5" speedchange="1901" duration="7000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="1"/>
+		<element energyPercent="1"/>
+		<element deathPercent="1"/>
+		<element holyPercent="-5"/>
+		<element firePercent="1"/>
+	</elements>
+		<immunities>
+		<immunity invisible="1"/>
+		<immunity paralyze="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="I AM THE MAGE CHOSEN BY THE MARIUNS" yell="1"/>
+	</voices>
+	<loot>
+		<item id="2160" countmax="30" chance="80000"/><!-- platinum coin -->
+        <item id="8902" chance="4000"/><!-- spellbook of mind control -->
+        <item id="11349" chance="3800"/><!-- spellweaver's robe -->
+        <item id="2323" chance="3800"/><!-- hat of the mad -->
+        <item id="2195" chance="4500"/><!-- BOH -->
+		<item id="3940" chance="100000"><!-- bp -->
+			<inside>
+	    		<item id="8904" chance="800"/><!-- mariun spellscroll -->
+<item id="6527" chance="200"/>
+			</inside>
+		</item>
+	</loot>
+<script> 
+<event name="mariunsKill"/> 
+</script>
+</monster>

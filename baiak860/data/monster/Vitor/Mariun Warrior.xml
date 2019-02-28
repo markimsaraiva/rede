@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Mariun Warrior" nameDescription="a mariun warrior" race="blood" experience="355000" speed="600" manacost="0">
+	<health now="1080000" max="1080000"/>
+	<look type="134" head="114" body="116" legs="94" feet="116" addons="3" corpse="6080"/>
+	<targetchange interval="10000" chance="8"/>
+	<strategy attack="100" defense="20"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="85"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1100" min="-4000" max="-6100"/>
+		<attack name="melee" interval="2000" chance="20" range="7" radius="3" target="0" min="-5150" max="-7700">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+	</attacks>
+		<defenses armor="90" defense="111">
+		<defense name="healing" interval="1000" chance="9" min="1500" max="3500">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="healing" interval="1000" chance="17" min="600" max="2000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="5" speedchange="1901" duration="7000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="1"/>
+		<element energyPercent="1"/>
+		<element deathPercent="1"/>
+		<element holyPercent="-5"/>
+		<element firePercent="1"/>
+	</elements>
+		<immunities>
+		<immunity invisible="1"/>
+		<immunity paralyze="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="I AM THE WARRIOR CHOSEN BY THE MARIUNS" yell="1"/>
+	</voices>
+	<loot>
+		<item id="2160" countmax="20" chance="80000"/><!-- platinum coin -->
+        <item id="2431" chance="1800"/><!-- stonecutter axe -->
+        <item id="2421" chance="1800"/><!-- thunder hammer -->
+<item id="6527" chance="200"/>
+		<item id="3940" chance="100000"><!-- bp -->
+			<inside>
+    	 	    <item id="7391" chance="200"/><!-- mariun sword -->
+    	 	    <item id="7423" chance="200"/><!-- mariun hammer -->
+    	 	    <item id="7433" chance="200"/><!-- mariun axe -->
+			</inside>
+		</item>
+	</loot>
+<script> 
+<event name="mariunsKill"/> 
+</script>
+</monster>
