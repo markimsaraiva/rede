@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Baylor" nameDescription="a Baylor" race="venom" experience="7500" speed="340" manacost="0">
+<health now="4300" max="4300"/>
+<look type="364" corpse="8593"/>
+<targetchange interval="5000" chance="12"/>
+<strategy attack="100" defense="0"/>
+<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+</flags>
+<attacks>
+<attack name="melee" interval="2000" skill="40" attack="50"/>
+<attack name="poison" interval="1000" chance="12" range="1" radius="1" target="1" min="-100" max="-155">
+<attribute key="areaEffect" value="poison"/>
+</attack>
+</attacks>
+<defenses armor="16" defense="19"/>
+<elements>
+<element deathPercent="20"/>
+</elements>
+<immunities>
+<immunity invisible="1"/>
+</immunities>
+	<loot>
+    <item id="2160" countmax="15" chance1="30000" chancemax="0"/> --Gold
+  </loot>
+</monster>

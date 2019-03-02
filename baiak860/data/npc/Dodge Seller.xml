@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Dodge/Critical Seller" script="data/npc/scripts/defau.lua" walkinterval="0" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="9" head="20" body="30" legs="40" feet="50" corpse="6080"/>
+    <parameters> 
+        <parameter key="module_shop" value="1"/> 
+        <parameter key="shop_buyable" value="Dodgestone,12575,50000000;CriticalStone,12396,55000000"/> 
+    </parameters> 
+</npc>

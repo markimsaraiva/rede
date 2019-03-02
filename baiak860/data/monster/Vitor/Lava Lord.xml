@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Lava Lord" nameDescription="a lava lord" race="blood" experience="650000" speed="600" manacost="0">
+	<health now="300000" max="300000"/>
+	<look type="12" head="38" body="94" legs="114" feet="82" corpse="6068"/>
+	<targetchange interval="10000" chance="8"/>
+	<strategy attack="80" defense="50"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="85"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" chance="30" min="-3990" max="-4890"/>
+		<attack name="fire" interval="1000" chance="30" range="9" min="-4100" max="-5120">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="fire"/>
+		</attack>
+			<attack name="fire" interval="2000" chance="17" length="4" spread="3" min="-4300" max="-4950">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+				<attack name="manadrain" interval="3000" chance="10" radius="6" target="0" min="-3450" max="-5750">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="21" radius="6" target="0" min="-4750" max="-5050">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</attack>
+		<attack name="firefield" interval="1000" chance="15" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="fire"/>
+		</attack>
+		<attack name="fire" interval="1000" chance="25" range="7" radius="2" target="1" min="-4930" max="-5670">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+	</attacks>
+		<defenses armor="90" defense="111">
+		<defense name="healing" interval="1000" chance="9" min="1500" max="2500">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="healing" interval="1000" chance="17" min="600" max="1000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="5" speedchange="1901" duration="7000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="1"/>
+		<element energyPercent="1"/>
+		<element deathPercent="1"/>
+		<element holyPercent="1"/>
+	</elements>
+	<immunities>
+		<immunity fire="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="20">
+		<voice sentence="YOU WILL FEEL THE POWER OF THE LORD OF THE VOLCANOS MWAHAHAHAH!!" yell="1"/>
+	</voices>
+	<loot>
+		<item id="2160" countmax="4" chance="80000"/><!-- crystal coin -->
+		<item id="2472" chance="3000"/><!-- mpa -->
+		<item id="2171" chance="12222"/><!-- platinum amulet -->
+		<item id="6527" chance="200"/>
+		<item id="1998" chance="100000"><!-- bp -->
+			<inside>
+				<item id="8886" chance="500"/><!-- volcano plate -->
+				<item id="2471" chance="10"/><!-- golden helmet -->
+				<item id="8924" chance="80"/><!-- volcano axe -->
+				<item id="7415" chance="80"/><!-- finisher -->
+				<item id="11113" chance="100"/><!-- elite boots -->
+			</inside>
+		</item>
+	</loot>
+</monster>

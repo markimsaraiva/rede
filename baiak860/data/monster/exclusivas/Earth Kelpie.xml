@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Earth Kelpie" nameDescription="a Earth Kelpie" race="undead" experience="7500" speed="340" manacost="0">
+    <health now="4300" max="4300"/>
+    <look type="285" corpse="8933"/>
+    <targetchange interval="20000" chance="50"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+    </flags>
+    <attacks>
+		<attack name="melee" interval="2000" skill="40" attack="50"/>
+			<attack name="earth" interval="2000" chance="15" range="7" min="-25" max="-140">
+		<attribute key="shootEffect" value="earth"/>
+			</attack>
+	<attack name="earth" interval="1000" chance="10" length="6" spread="0" min="-100" max="-270">
+		<attribute key="areaEffect" value="smallplants"/>
+			</attack>
+	<attack name="physical" interval="1000" chance="9" target="0" radius="4" min="-100" max="-240">
+      		<attribute key="areaEffect" value="poff"/>
+  		 	</attack>
+    </attacks>
+    <defenses armor="30" defense="30"/>
+    <elements>
+     <element deathPercent="20"/>
+    </elements>
+    <immunities>
+      <immunity paralyze="1"/>
+      <immunity invisible="1"/>
+      <immunity earth="0"/>
+    </immunities>
+<loot>
+    <item id="2160" countmax="15" chance1="30000" chancemax="0"/> --Gold
+  </loot>
+  </monster>

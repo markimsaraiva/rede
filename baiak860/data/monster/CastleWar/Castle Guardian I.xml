@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Castle Guardian I" nameDescription="a Castle Guardian I" race="blood" experience="150000" speed="500" manacost="0">
+	<health now="5000000" max="500000"/>
+ 	<look type="134" head="113" body="95" legs="113" feet="116" corpse="3128" addons="3"/>
+	<targetchange interval="2000" chance="5"/>
+	<strategy attack="80" defense="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1700" skill="150" attack="200"/>
+		<attack name="fire" interval="2000" chance="0" range="7" radius="2" target="1" min="-900" max="-1600">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+		<attack name="strength" interval="3000" chance="30" radius="1" target="0" min="-1500" max="-2000">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+	</attacks>
+	<defenses armor="75" defense="50">
+		<defense name="healing" interval="5000" chance="80" min="3000" max="5000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="5000" chance="30" speedchange="500" duration="20000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		<defense name="healing" interval="10000" chance="100" min="5000" max="9000"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity physical="0"/>
+		<immunity energy="0"/>
+		<immunity fire="0"/>
+		<immunity poison="0"/>
+		<immunity lifedrain="0"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<script> 
+<event name="deathCastle"/> 
+<event name="statsCastle"/>
+</script>
+</monster>

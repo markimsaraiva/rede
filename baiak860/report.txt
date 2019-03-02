@@ -1,0 +1,9 @@
+ [->] BUGS OU COISAS PRA ARRUMAR GRAN BAIAK [<-]    
+
+Rainbow: 
+Rainbow: OIE
+Rainbow: EU SOU GM E POSSO EDITAR OUTRO NEGOCIO DESSE, APENAS PARA A STAFF VER, E FICAR ORGANIZADA, CASO TENHA MUITA COISA PRA ARRUMAR. POR EXPERIENCIA PROPRIA ISSO VAI SER BOM!
+Rainbow: 23:29 You see a mailbox. ItemID: [3981], UniqueID: [44442]. Position: [X: 1108] [Y: 1064] [Z: 7].
+Rainbow: 1
+Rainbow: 23:30 You see a bag. ItemID: [2330], UniqueID: [44443]. Position: [X: 1107] [Y: 1064] [Z: 7].
+Rainbow: 23-10-17 as 23:30 You see a bag. ItemID: [2330], UniqueID: [44443]. Position: [X: 1107] [Y: 1064] [Z: 7].

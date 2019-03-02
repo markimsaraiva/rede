@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Magician Mage" nameDescription="a Magician Mage" race="blood" experience="7500" speed="340" manacost="0">
+	<health now="5700" max="5700"/>
+  <look type="130" head="19" body="55" legs="55" feet="0" addons="2" corpse="6080"/>
+  <targetchange interval="5000" chance="30"/>
+  <strategy attack="90" defense="10"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="4"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="1000"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="30" attack="30"/>
+    <attack name="ice" interval="1000" chance="12" range="2" target="1" min="-20" attack="-50">
+      <attribute key="shootEffect" value="ice"/>
+	  <attribute key="areaEffect" value="iceattack"/>
+    </attack>
+	<attack name="energy" interval="2000" chance="20" range="2" target="1" min="-30" max="-50">
+	  <attribute key="shootEffect" value="energyball"/>
+	  <attribute key="areaEffect" value="energy"/>
+	  </attack>
+    <attack name="manadrain" interval="2000" chance="24" range="2" min="-35" max="-40">
+	<attribute key="shootEffect" value="ice"/>
+	</attack>
+    <attack name="speed" interval="7000" chance="5" range="2" speedchange="-750" duration="40000">
+	  <attribute key="shootEffect" value="smallice"/>
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </attack>
+    <attack name="fire" interval="2000" chance="28" range="2" radius="3" target="1" min="-30" max="-35">
+      <attribute key="shootEffect" value="burstarrow"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+        <attack name="energy" interval="3000" chance="18" length="8" spread="0" min="-20" max="-30">
+      <attribute key="areaEffect" value="bigclouds"/>
+    </attack>
+
+  </attacks>
+  <defenses armor="20" defense="20">
+    <defense name="healing" interval="1000" chance="25" min="260" max="500">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="invisible" interval="337000" chance="10" duration="1000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+
+  </defenses>
+  <elements>
+	<element physicalPercent="-10"/>
+	<element holyPercent="-10"/>
+	<element earthPercent="90"/>
+  </elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="1"/>
+    <immunity fire="1"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="1">
+    <summon name="stone golem" interval="10000" chance="1" />
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="Learn the secret of our magic! YOUR death!"/>
+    <voice sentence="Even a rat is a better mage than you."/>
+    <voice sentence="We don't like intruders!"/>
+  </voices>
+<loot>
+    <item id="2160" countmax="15" chance1="30000" chancemax="0"/> --Gold
+  </loot>
+</monster>

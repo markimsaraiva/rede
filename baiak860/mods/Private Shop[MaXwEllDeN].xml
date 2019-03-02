@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mod name="Private Shop[MaXwEllDeN]" author="MaXwEllDeN" contact="maxwellmda@gmail.com" version="1.0" enabled="yes">
+	<event type="login" name="PvShop" event="script" value="Private Shop/Creaturescripts.lua"/>
+	<event type="logout" name="PvShopLOGOUT" event="script" value="Private Shop/Creaturescripts.lua"/>
+	<event type="preparedeath" name="PvShopDEATH" event="script" value="Private Shop/Creaturescripts.lua"/>
+	<talkaction words="!shopoff" event="script" value="Private Shop/Talkaction.lua"/>	
+</mod>

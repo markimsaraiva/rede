@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Event Seller" script="data/npc/scripts/eventcoins.lua" walkinterval="1000" floorchange="0">
+    <health now="100" max="100"/>
+    <look type="128" head="96" body="99" legs="99" feet="115" addons="2"/>
+    <parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME| I change {event coins} for {items}, say {trade}, Ola |PLAYERNAME| Eu troco {event coins} por {items}, diga {trade}." />
+        <parameter key="module_keywords" value="1" />
+    </parameters>
+</npc>

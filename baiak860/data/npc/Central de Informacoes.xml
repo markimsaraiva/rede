@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Central de Informacoes" script="data/npc/scripts/central de informacoes.lua" walkinterval="0" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="128" head="0" body="86" legs="0" feet="38" addons="3"/>
+	<parameters>
+		<parameter key="message_greet" value="Bem Vindo ao Baiak New |PLAYERNAME|! Diga os sobre o que deseja saber? {Dodge}, {Bless}, {Houses}, {Quests}, {Armas}, {Addons}, {Cast}, {Refinamento}" />
+		<parameter key="message_decline" value="Boa Sorte." />		
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="dodge;bless;houses;quests;armas;addons;cast;refinamento" />
+        <parameter key="keyword_reply1" value="Temos Dodge e Critical, digite !dodge e !critical para saber como funciona . " />
+		<parameter key="keyword_reply2" value="use o comando !bless ele já serve como Aol" />
+		<parameter key="keyword_reply3" value="Voce pode comprar casa no server normalmente com o comando !buyhouse para vende-la use !leavehouse, tambem pode negociar com players. Se 1 player estiver inativo por 7 dias você pode usar o comando !eject na casa dele."/>
+	    <parameter key="keyword_reply4" value="Temos muitas quests, os segundos melhores items sao obtidos atraves de quests, entre no Teleport Quests e confira." />
+        <parameter key="keyword_reply5" value="Para conseguir os itens Donate, Acesse a nossa pagina baiaknew.servegame.com" />
+        <parameter key="keyword_reply6" value="Para adquirir os addons procure o Boss do addon desejado que se localiza no teleport ADDONS e mate-o depois entre no teleport que nascera e clique na Statua para pegar seu Addon." />
+        <parameter key="keyword_reply7" value="Para ligar seu cast digite /cast on ou digite !cast para saber como ele funciona."/>
+        <parameter key="keyword_reply8" value="Você pode refinar seus equipamentos de todas as vocações ate em +3. E armas apenas para knights até +3. Para procure o Npc Refinamento no teleporte." />
+    </parameters>
+</npc>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Castle Guardian II" nameDescription="a Castle Guardian II" race="blood" experience="150000" speed="500" manacost="0">
+	<health now="4500000" max="4500000"/>
+ 	<look type="152" head="95" body="121" legs="40" feet="97" corpse="3128" addons="3"/>
+	<targetchange interval="2000" chance="5"/>
+	<strategy attack="80" defense="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="4"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+	       <attack name="physical" interval="2000" chance="90" range="7" min="-1000" max="-3000">
+	       <attribute key="shootEffect" value="redstar"/>
+		</attack>
+        <attack name="physical" interval="1000" chance="15" range="7" radius="4" target="1" min="-1245" max="-1865">
+			<attribute key="shootEffect" value="redstar"/>
+			<attribute key="areaEffect" value="assassin"/>
+		</attack>
+		<attack name="holy" interval="2000" chance="15" range="7" radius="4" target="1" min="-2245" max="-2865">
+			<attribute key="shootEffect" value="holy"/>
+			<attribute key="areaEffect" value="holyarea"/>
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="50">
+		<defense name="healing" interval="7000" chance="100" min="500" max="700">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="10000" chance="100" speedchange="500" duration="20000">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity physical="0"/>
+		<immunity energy="0"/>
+		<immunity fire="0"/>
+		<immunity poison="0"/>
+		<immunity lifedrain="0"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="0"/>
+		<immunity drunk="0"/>
+		<immunity invisible="0"/>
+	</immunities>
+	<script> 
+<event name="deathCastle"/> 
+<event name="statsCastle"/>
+</script>
+</monster>

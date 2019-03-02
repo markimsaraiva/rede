@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="The BOSS STRIKER" nameDescription="a The BOSS STRIKER" race="blood" experience="99000000" speed="1200" manacost="0">
+	<health now="15000000" max="15000000"/>
+	<look type="12" head="69" body="54" legs="32" feet="45" addons="3"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+	<attack name="fire" interval="2000" chance="14" range="7" radius="7" target="1" min="-2160" max="-3190">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+		<attack name="firefield" interval="1000" chance="15" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="fire"/>
+		</attack>
+		<attack name="melee" interval="2000" skill="120" attack="250"/>
+		<attack name="physical" interval="2000" chance="30" range="7" min="-1000" max="-2485">
+			<attribute key="shootEffect" value="largerock"/>
+		</attack>
+	</attacks>
+	<elements>
+		<element earthPercent="80"/>
+		<element holyPercent="30"/>
+		<element firePercent="30"/>
+		<element energyPercent="10"/>
+		<element physicalPercent="10"/>
+		<element icePercent="-10"/>
+		<element deathPercent="5"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="20">
+		<voice sentence="Uma dimensao so para mim... que honra!"/>
+		<voice sentence="Veio me alimentar, humano?"/>
+		<voice sentence="AAAAAAAAAAAAAAAAAAH QUEM ME ACORDOU?" yell="1"/>
+	</voices>
+</monster>
+

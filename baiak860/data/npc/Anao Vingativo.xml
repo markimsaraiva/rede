@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Anao Vingativo" script="data/npc/scripts/first npc.lua" walkinterval="5000" floorchange="0">
+    <health now="100" max="100"/>
+    <look type="300" corpse="8955"/>
+    <parameters>
+		<parameter key="message_greet" value="Ei |PLAYERNAME|, eu tenho uma {missao} pra você! Depois que você concluir ela eu posso te dar uma grande {recompensa}!" />
+        </parameters>
+</npc>

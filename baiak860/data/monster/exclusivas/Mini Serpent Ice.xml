@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Mini Serpent Ice" nameDescription="a Mini Serpent Ice" race="blood" experience="7500" speed="470" manacost="390">
+	<health now="4300" max="4300"/>
+	<look type="317" head="0" body="0" legs="0" feet="0" corpse="9882"/>
+	<targetchange interval="10000" chance="30"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+	</flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="40" attack="50"/>
+    <attack name="poisonfield" interval="2000" chance="13" range="7" radius="1" target="100">
+      <attribute key="shootEffect" value="poison"/>
+    </attack>
+	<attack name="earth" interval="2000" chance="100000" range="7" target="1" min="-40" max="-70">
+      <attribute key="shootEffect" value="poison"/>
+    </attack>
+  </attacks>
+	<defenses armor="13" defense="21">
+		<defense name="healing" interval="1200" chance="25" min="50" max="150">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity invisible="1"/>
+		<immunity drown="1"/>
+		<immunity paralyze="1"/>
+		</immunities>
+	<voices interval="8000" chance="20">
+		<voice sentence="CHHHRRRR"/>
+		<voice sentence="HISSSS"/>
+	</voices>
+	 <loot>
+    <item id="2160" countmax="15" chance1="30000" chancemax="0"/> --Gold
+  </loot>
+</monster>

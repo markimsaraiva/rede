@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Void Souleater" nameDescription="a Void souleater" race="undead" experience="7500" speed="340" manacost="0">
+	<health now="4300" max="4300"/>
+	<look type="355" corpse="12632"/>
+	<targetchange interval="2000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="30" attack="90" />
+		<attack name="death" interval="2000" chance="10" range="7" target="1" max="-200">
+			<attribute key="shootEffect" value="death"/>
+			<attribute key="areaEffect" value="mortarea"/>
+		</attack>	
+		<attack name="death" interval="2000" chance="9" length="8" spread="0" min="-125" max="-255">
+			<attribute key="areaEffect" value="mortarea"/>
+		</attack>	
+		<attack name="manadrain" interval="2000" chance="13" range="7" target="1" max="-100">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>	
+	</attacks>
+	<defenses armor="25" defense="20">
+		<defense name="healing" interval="1000" chance="50" min="100" max="155">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="40" speedchange="360" duration="80000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>		
+	</immunities>
+	<loot>
+    <item id="2160" countmax="15" chance1="30000" chancemax="0"/> --Gold
+  </loot>
+</monster>

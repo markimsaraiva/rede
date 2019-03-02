@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Rei Tywin" nameDescription="O Rei Tywin, Primeiro de seu nome" race="fire" experience="10000000" speed="1200" manacost="10000">
+  <health now="1000000" max="1000000"/>
+  <look type="332" corpse="6080"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="90" defense="10"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="1000" chance="30" min="-6350" max="-8220"/>
+    <attack name="manadrain" interval="2000" chance="13" range="7" min="-5700" max="-6867"/>
+    <attack name="fire" interval="2000" chance="30" range="7" radius="7" target="1" min="-6432" max="-7398">
+		<attribute key="shootEffect" value="fire"/>
+		<attribute key="areaEffect" value="firearea"/>
+	</attack>
+    <attack name="lifedrain" interval="1000" chance="12" length="8" spread="0" min="-5000" max="-5964">
+		<attribute key="areaEffect" value="purpleenergy"/>
+	</attack>
+	<attack name="speed" interval="2000" chance="15" target="1" speedchange="-750" duration="30000">
+		<attribute key="shootEffect" value="suddendeath"/>
+	</attack>
+	<attack name="energy" interval="3000" chance="10" range="1" target="1" min="-5638" max="-6637">
+		<attribute key="areaEffect" value="purpleenergy"/>
+	</attack>
+  </attacks>
+  <defenses armor="55" defense="55">
+    <defense name="healing" interval="2000" chance="15" min="900" max="1000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+	<defense name="speed" interval="1000" chance="8" speedchange="290" duration="5000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+	<elements>
+		<element physicalPercent="30"/>
+		<element energyPercent="50"/>
+		<element earthPercent="20"/>
+		<element icePercent="15"/>
+		<element holyPercent="15"/>
+		<element deathPercent="20"/>
+	</elements>
+  <immunities>
+    <immunity fire="1"/>
+    <immunity drown="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="1">
+    <summon name="Chupa Cabra" interval="1000" chance="12"/>
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="Saia do meu castelo!" yell="1"/>
+    <voice sentence="Voce ousa desonrar o Rei?!" yell="1"/>
+    <voice sentence="Tire eles daqui, meu cachorro!" yell="1"/>
+    <voice sentence="Eu sou o rei de todo o continente, nao me perturbe!"/>
+    <voice sentence="SAIAAAA" yell="0"/>
+  </voices>
+  <loot>
+  	<item id="2514" chance="19000000"/> --mastermind shield
+ 	<item id="2472" chance="20000000"/> --magic plate armor
+		        <item id="2112" chance="4100"/> --addon doll
+			<item id="2470" chance="1350"/> --golden legs
+			<item id="7369" chance="300"/> -- golden trophy
+			<item id="2520" chance="3100"/> --demon shield
+	<item id="6527" countmax="10" chance="3600"/>
+ 	<item id="10521" chance="100000">
+		<inside>
+		 	<item id="9778" chance="980"/> -- noble helmet
+		 	<item id="9776" chance="980"/> -- noble robe
+<item id="9777" chance="980"/> -- noble kilt
+<item id="3969" chance="980"/> -- citzen helmet
+<item id="3968" chance="980"/> -- citzen armor
+<item id="3983" chance="980"/> -- citzen legs
+<item id="2111" chance="1400"/> -- prince snowball
+<item id="2435" chance="1400"/> -- prince axe
+<item id="2437" chance="1400"/> -- prince staff
+<item id="7392" chance="1400"/> -- prince hammer
+<item id="7418" chance="1400"/> -- prince sword
+<item id="7428" chance="940"/> -- massud basher
+<item id="7433" chance="940"/> -- massud chopper
+<item id="8850" chance="940"/> -- massud bolter
+<item id="7379" chance="940"/> -- massud staff
+<item id="7386" chance="940"/> -- massud sword
+<item id="7420" chance="650"/> -- skycaller sword
+<item id="7450" chance="650"/> -- skycaller hammer
+<item id="7454" chance="650"/> -- skycaller axe
+<item id="12327" chance="650"/> -- skycaller staff
+<item id="5907" chance="650"/> -- skycaller slingshot
+<item id="12647" chance="650"/> -- Noble Spellbook
+<item id="2527" chance="650"/> -- Citizen Shield
+		</inside>
+ 	</item>
+</loot>
+</monster>
